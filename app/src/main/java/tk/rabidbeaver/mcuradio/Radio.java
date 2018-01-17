@@ -7,6 +7,7 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.graphics.Color;
 import android.net.LocalSocket;
 import android.net.LocalSocketAddress;
 import android.os.Bundle;
@@ -18,6 +19,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
@@ -32,8 +34,8 @@ public class Radio extends Activity {
 	private RadioDB rdb;
 	private Button channelbtn;
 	private ImageButton togglefav;
-	//TODO private TextView radiotext;
-	//TODO private TextView programservice;
+	private TextView radiotext;
+	private TextView programservice;
 
 	protected static int lastFreqAM = 1010;
 	protected static int lastFreqFM = 9310;
@@ -110,8 +112,8 @@ public class Radio extends Activity {
 		else freq = lastFreqAM;
 
 		//channel = (Button) this.findViewById(R.id.channelline);
-		//TODO radiotext = findViewById(R.id.radiotextline);
-		//TODO programservice = findViewById(R.id.programserviceline);
+		radiotext = findViewById(R.id.radiotextline);
+		programservice = findViewById(R.id.programserviceline);
 		
 		channelbtn = findViewById(R.id.channelline);
 		channelbtn.setOnClickListener(new Button.OnClickListener(){
@@ -324,6 +326,8 @@ public class Radio extends Activity {
 			b.setId(i);
 			b.setOnClickListener(new Button.OnClickListener(){
 				@Override
+				//b.setTextColor(Color:white);
+				//b.setTextColor(Color.parseColor("#ffffff"));
 				public void onClick(View v) {
 					int favidx = v.getId();
 
@@ -361,6 +365,7 @@ public class Radio extends Activity {
 					return false;
 				}
 			});
+			b.setTextColor(Color.WHITE);
 			String favname;
 			if (favs[i].fm)
 				favname = Float.toString(((float) favs[i].frequency) / 100) + " FM";

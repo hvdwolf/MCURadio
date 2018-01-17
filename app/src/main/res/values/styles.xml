@@ -10,11 +10,22 @@
             res/values-vXX/styles.xml, while customizations related to
             backward-compatibility can go here.
         -->
+
     </style>
+
 
     <!-- Application theme. -->
     <style name="AppTheme" parent="AppBaseTheme">
         <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+    </style>
+
+    <style name="TextViewAsLabel">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">#525252</item>
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:layout_marginTop">3dp</item>
+        <item name="android:textStyle">bold</item>
     </style>
 
 </resources>

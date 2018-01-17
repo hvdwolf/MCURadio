@@ -7,14 +7,15 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:orientation="vertical"
-    tools:context="tk.rabidbeaver.mcuradio.Radio" >
+    tools:context="tk.rabidbeaver.mcuradio.Radio"
+	android:background="@drawable/bitmap_bk">
     
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:orientation="vertical" >
-        
+
     	<RelativeLayout
         	android:layout_width="match_parent"
         	android:layout_height="wrap_content" >
@@ -25,7 +26,8 @@
         		android:layout_height="wrap_content"
         		android:layout_alignParentStart="true"
         		style="?android:attr/buttonBarButtonStyle"
-        		android:textSize="90sp" />
+        		android:textSize="90sp"
+				android:textColor="@android:color/white" />
     	
     		<Button
     	    	android:id="@+id/amfmbtn"
@@ -36,7 +38,9 @@
     	    	android:layout_marginLeft="50dp"
     	    	android:layout_marginRight="50dp"
     	    	style="?android:attr/buttonBarButtonStyle"
-				android:text="@string/switchband" />
+    	    	android:textSize="40sp"
+    	    	android:text="@string/switchband"
+				android:textColor="@android:color/white" />
     		
     		<ImageButton
     		    android:id="@+id/favorite"
@@ -49,23 +53,24 @@
     		    android:contentDescription="@string/notimportant"/>
     	
     	</RelativeLayout>
-    
-    	<TextView
+
+		<TextView
+            android:id="@+id/programserviceline"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textSize="20sp"
+			android:layout_weight="1" />
+
+		<TextView
         	android:id="@+id/radiotextline"
         	android:layout_width="match_parent"
         	android:layout_height="wrap_content"
         	android:maxLines="3"
         	android:textStyle="italic"
         	android:textSize="30sp" />
-    
-    	<TextView
-        	android:id="@+id/programserviceline"
-        	android:layout_width="match_parent"
-        	android:layout_height="wrap_content"
-        	android:textStyle="bold"
-        	android:textSize="20sp" />
-    	
-    </LinearLayout>
+
+	</LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -73,33 +78,41 @@
         android:layout_above="@+id/horizontalScroll"
         android:orientation="horizontal" >
 
-        <Button
+		<Button
             android:id="@+id/seekdown"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/seekdown"
-            tools:ignore="ButtonStyle" />
+            tools:ignore="ButtonStyle"
+			android:textColor="@android:color/white"
+			android:textColorHighlight="@android:color/holo_orange_light" />
         
         <Button 
     	    android:id="@+id/tunedown"
         	android:layout_width="wrap_content"
         	android:layout_height="wrap_content"
         	android:text="@string/tunedown"
-            tools:ignore="ButtonStyle" />
+            tools:ignore="ButtonStyle"
+			android:textColor="@android:color/white"
+			android:textColorHighlight="@android:color/holo_orange_light" />
         
         <Button
         	android:id="@+id/tuneup"
         	android:layout_width="wrap_content"
         	android:layout_height="wrap_content"
         	android:text="@string/tuneup"
-            tools:ignore="ButtonStyle" />
+            tools:ignore="ButtonStyle"
+			android:textColor="@android:color/white"
+			android:textColorHighlight="@android:color/holo_orange_light" />
         
     	<Button
         	android:id="@+id/seekup"
         	android:layout_width="wrap_content"
         	android:layout_height="wrap_content"
         	android:text="@string/seekup"
-            tools:ignore="ButtonStyle" />
+            tools:ignore="ButtonStyle"
+			android:textColor="@android:color/white"
+			android:textColorHighlight="@android:color/holo_orange_light" />
     
     </LinearLayout>
     
